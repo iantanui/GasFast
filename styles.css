@@ -75,7 +75,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .about-text {
@@ -89,6 +89,7 @@ main {
   text-align: right;
   margin-right: 20px;
 }
+
 .about-image img {
   max-width: 100%;
   width: 100%;
@@ -96,13 +97,9 @@ main {
   border-radius: 10px;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
 .our-services {
   padding: 0 16px;
+  margin-bottom: 70px;
 }
 
 .cards {
@@ -110,10 +107,10 @@ ul {
   gap: 70px;
   justify-content: space-around;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
 .card {
+  text-align: left;
   border-radius: 10px;
   padding: 16px;
   width: 400px;
@@ -121,6 +118,10 @@ ul {
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+}
+
+.card h4 {
+  text-align: center;
 }
 
 .card:hover {
@@ -165,6 +166,10 @@ ul {
   transition: transform 0.3s ease-in-out;
 }
 
+.item:hover {
+  transform: scale(1.05);
+}
+
 .item img {
   width: 400px;
   height: 250px;
@@ -176,23 +181,25 @@ ul {
   text-align: center;
 }
 
-table {
-  width: 60%;
+.service-price-list {
+  text-align: center;
   justify-content: center;
+}
+
+.service-price-list table {
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 600px;
   border-collapse: collapse;
-  margin: 20px 0;
 }
 
-table,
-th,
-td {
+.service-price-list th,
+.service-price-list td {
   border: 1px solid black;
-}
-
-th,
-td {
-  padding: 10px;
+  padding: 8px;
   text-align: left;
+  width: 400px;
 }
 
 footer {
@@ -207,9 +214,6 @@ footer {
 }
 
 @media screen and (max-width: 680px) {
-  main {
-    margin: 2px 0 70px 0;
-  }
   h2 {
     text-align: start;
   }
@@ -238,11 +242,18 @@ footer {
     width: 400px;
   }
 
-  .item img  {
+  .item img {
     width: 400px;
   }
 
-  table {
+  .service-price-list {
     justify-content: center;
+    margin-bottom: 5em;
+  }
+
+  .service-price-list table,
+  .service-price-list th,
+  .service-price-list td {
+    width: 400px;
   }
 }
