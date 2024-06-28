@@ -251,6 +251,10 @@ footer {
     margin-bottom: 5em;
   }
 
+  .service-price-list h2 {
+    text-align: center;
+  }
+
   .service-price-list table,
   .service-price-list th,
   .service-price-list td {
