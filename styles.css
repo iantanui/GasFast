@@ -79,7 +79,7 @@ main {
 }
 
 .about-text {
-    margin-top: -30px;
+  margin-top: -30px;
   flex: 1;
   text-align: left;
 }
@@ -102,7 +102,7 @@ ul {
 }
 
 .our-services {
-    padding:  0 16px;
+  padding: 0 16px;
 }
 
 .cards {
@@ -110,6 +110,7 @@ ul {
   gap: 70px;
   justify-content: space-around;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -127,6 +128,7 @@ ul {
 }
 
 .card img {
+  border-radius: 50%;
   margin: 0 auto;
   display: block;
   margin-top: 10px;
@@ -136,8 +138,47 @@ ul {
   padding: 2px 16px;
 }
 
+.service-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-text {
+  margin: 0 auto;
+}
+
+.service-items {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  background-color: white;
+  color: darkcyan;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.item img {
+  width: 400px;
+  height: 250px;
+  display: block;
+}
+
+.item .container {
+  padding: 2px;
+  text-align: center;
+}
+
 table {
-  width: 100%;
+  width: 60%;
+  justify-content: center;
   border-collapse: collapse;
   margin: 20px 0;
 }
@@ -165,20 +206,43 @@ footer {
   justify-content: space-around;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
+  main {
+    margin: 2px 0 70px 0;
+  }
   h2 {
     text-align: start;
   }
+
   .about {
     flex-direction: column;
   }
-  .cards {
+
+  .cards,
+  .service-items {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    justify-content: center;
   }
 
   .card {
     width: 90%;
+  }
+
+  .about-image img {
+    height: 200px;
+  }
+
+  .item {
+    width: 400px;
+  }
+
+  .item img  {
+    width: 400px;
+  }
+
+  table {
+    justify-content: center;
   }
 }
