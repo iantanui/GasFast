@@ -1,17 +1,30 @@
+html,
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: black;
-  color: white;
-  padding: 10px 0;
+h1,
+h2 {
+  font-family: "Georgia", serif;
   text-align: center;
+  color: darkcyan;
+}
+
+header {
+  background-color: white;
+  padding: 10px 0;
+}
+
+.nav-container {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
@@ -19,63 +32,77 @@ header {
   border-radius: 50%;
 }
 
+nav {
+  flex-grow: 1;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
   justify-content: center;
-  background-color: none;
+  align-items: center;
   margin: 0;
+  height: 100%;
+  flex-grow: 1;
 }
 
 nav ul li {
-  text-align: center;
-  display: inline;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 1.2em;
+  padding: 10px;
+  display: block;
 }
 
-h1 {
-  text-align: center;
-  color: darkcyan;
+nav ul li a:hover {
+  background: gainsboro;
+  border-radius: 10px;
 }
 
 main {
+  margin: -40px 10px;
   padding: 16px;
+  text-align: center;
 }
 
 .about {
+  padding: 0 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
 
 .about-text {
+    margin-top: -30px;
   flex: 1;
+  text-align: left;
 }
 
 .about-image {
   flex: 1;
   text-align: right;
+  margin-right: 20px;
 }
 .about-image img {
   max-width: 100%;
+  width: 100%;
   height: auto;
-}
-
-h1,
-h2 {
-  font-family: "Georgia", serif;
+  border-radius: 10px;
 }
 
 ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+.our-services {
+    padding:  0 16px;
 }
 
 .cards {
@@ -87,7 +114,7 @@ ul {
 
 .card {
   border-radius: 10px;
-  padding: 8px;
+  padding: 16px;
   width: 400px;
   background-color: darkcyan;
   color: white;
@@ -139,10 +166,12 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-
-    .about {
-        flex-direction: column;
-    }
+  h2 {
+    text-align: start;
+  }
+  .about {
+    flex-direction: column;
+  }
   .cards {
     flex-direction: column;
     align-items: center;
